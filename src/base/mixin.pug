@@ -1,4 +1,35 @@
-mixin title(title)
-    .title 
+mixin title__mixin(title)
+    .title__mixin
         span= title 
-        
+    
+
+mixin card__product__mixin(img,name,discount__price,price)
+    .card__product__mixin
+        .card__img 
+            img(src=img, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name 
+            .card__desc__rate 
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__price
+                .price__discount=discount__price
+                .price__sold=price
+
+mixin card__news__mixin(img, time, title, desc)
+    .card__news__mixin
+        .card__img 
+            img(src=img, alt="")
+        .card__desc
+            .news__time
+                span=time 
+            .news__title 
+                a(href="#")=title 
+            .news__desc 
+                p=desc
+            .news__btn 
+                a(href="#") Đọc tiếp  
