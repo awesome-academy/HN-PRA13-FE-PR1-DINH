@@ -1,0 +1,38 @@
+extend ../layouts/default_layout.pug
+block content 
+    .news__description.container.container__base 
+        +navigate__mixin("Cây dạ lan")
+        .news__description__main
+            .row 
+                .news__sidebar.col-3
+                    +sidebar__news__mixin
+                .news__list.col-9
+                    +news__description__mixin
+                    .news__comments 
+                        .comments__head Bình luận (3)
+                        .news__comment__box
+                            .user__box__item
+                                +comment__card__mixin 
+                                .user__reply
+                                    +comment__card__mixin 
+
+
+                            .user__box__item
+                                +comment__card__mixin 
+                    .news__create__comment 
+                        .comment__head Viết bình luận
+                        .comment__box 
+                            .row.g-4
+                                .item.col-4
+                                    input(type="text" placeholder="Họ và tên: ")
+                                .item.col-4
+                                    input(type="text" placeholder="Email: ")
+                                .item.col-4
+                                    input(type="text" placeholder="Phone: ")
+                            .row.g-2 
+                                .item 
+                                    textarea(name="cmt", cols="30", rows="10" placeholder="Bình luận,...") 
+                        .button__cmt 
+                            button Bình luận
+
+                            
