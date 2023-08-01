@@ -1,0 +1,32 @@
+.register{
+    padding-bottom: 10rem;
+    .reg__title{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $primary-color;
+        padding: 2rem 0;
+    }
+    form{
+        font-size: 1rem;
+        .form__btn{
+            @include flex-start;
+            padding-top: 3rem;
+
+        }
+        .checkbox{
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+        }
+        .btn__back{
+            margin-right: 1.5rem;
+            input{
+                @include input__submit__mixin($primary-color, $secondary-color, $primary-color)
+            }
+        }
+        .btn__submit{
+            input{
+                @include input__submit__mixin($secondary-color, $primary-color,$primary-color, )
+            }
+        }
+    }
+}

@@ -336,6 +336,24 @@ body {
   font-style: italic;
 }
 
+.input__text__mixin {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.input__text__mixin label {
+  padding-bottom: 1rem;
+}
+.input__text__mixin label::after {
+  content: "*";
+  color: #ed1c24;
+}
+.input__text__mixin input {
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+}
+
 .home .selling__product .product__list .products__title {
   margin-bottom: 35px;
 }
@@ -495,6 +513,110 @@ body {
   color: #fff;
 }
 .news__description .news__create__comment .button__cmt button:hover {
+  opacity: 0.8;
+}
+
+.login {
+  padding-bottom: 10rem;
+}
+.login .login__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3fb871;
+  padding: 2rem 0;
+}
+.login form {
+  padding-right: 2rem;
+}
+.login form .checkbox {
+  padding: 2rem 0 3rem 0;
+}
+.login form .checkbox span {
+  margin-left: 2rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  color: #979797;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.login form .checkbox span:hover {
+  color: #3fb871;
+  border-bottom: 1px solid #3fb871;
+}
+.login form .form__btn input {
+  padding: 1rem 2.5rem;
+  background-color: #3fb871;
+  color: #ffffff;
+  border: 1px solid #3fb871;
+  border-radius: 50px;
+}
+.login form .form__btn input:hover {
+  opacity: 0.8;
+}
+.login .login__desc {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: #979797;
+}
+.login .login__btn__direct {
+  margin-top: 2rem;
+}
+.login .login__btn__direct a input {
+  padding: 1rem 2.5rem;
+  background-color: #3fb871;
+  color: #ffffff;
+  border: 1px solid #3fb871;
+  border-radius: 50px;
+}
+.login .login__btn__direct a input:hover {
+  opacity: 0.8;
+}
+
+.register {
+  padding-bottom: 10rem;
+}
+.register .reg__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3fb871;
+  padding: 2rem 0;
+}
+.register form {
+  font-size: 1rem;
+}
+.register form .form__btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 3rem;
+}
+.register form .checkbox {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.register form .btn__back {
+  margin-right: 1.5rem;
+}
+.register form .btn__back input {
+  padding: 1rem 2.5rem;
+  background-color: #ffffff;
+  color: #3fb871;
+  border: 1px solid #3fb871;
+  border-radius: 50px;
+}
+.register form .btn__back input:hover {
+  opacity: 0.8;
+}
+.register form .btn__submit input {
+  padding: 1rem 2.5rem;
+  background-color: #3fb871;
+  color: #ffffff;
+  border: 1px solid #3fb871;
+  border-radius: 50px;
+}
+.register form .btn__submit input:hover {
   opacity: 0.8;
 }
 

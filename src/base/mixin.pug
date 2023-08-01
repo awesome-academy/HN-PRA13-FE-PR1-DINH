@@ -160,8 +160,18 @@ mixin comment__card__mixin()
                     span Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây 
                 .user__time 
                     span T7, 22/03/2003 12.00 AM
-        
 
+mixin input__submit__mixin(name)
+    .input__submit__mixin   
+        input(type="submit" value=name)
+
+mixin input__text__mixin(title, name, type)
+    .input__text__mixin 
+        label(for=name)=title 
+        input( name=name type=type)
+
+
+        
             
 
 

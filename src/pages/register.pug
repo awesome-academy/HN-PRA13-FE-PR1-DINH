@@ -1,0 +1,32 @@
+extend ../layouts/default_layout.pug
+block content 
+    .register.container.container__base 
+        +navigate__mixin("Đăng ký")
+        form(action="/register", method="POST")
+            .reg__title 
+                span THÔNG TIN CÁ NHÂN
+            .row 
+                .col-6
+                    +input__text__mixin("Họ và tên", "name", "name")
+                .col-6
+                    +input__text__mixin("Số điện thoại", "phonenumber", "phonenumber")
+                .col-6
+                    +input__text__mixin("Email của bạn", "email", "email")
+                .col-6
+                    +input__text__mixin("Website của bạn", "name", "name")
+            .checkbox 
+                input(type="checkbox", id="remember", name="remember")
+                label(for="remember") Đăng ký nhận thông qua meo!
+            .reg__title 
+                span THÔNG TIN TÀI KHOẢN
+            .row 
+                .col-6
+                    +input__text__mixin("Mật khẩu", "password" , "password")
+                .col-6
+                    +input__text__mixin("Nhập lại mật khẩu", "password" , "password") 
+            
+            .form__btn 
+                .btn__back 
+                    +input__submit__mixin("Quay ve")
+                .btn__submit
+                    +input__submit__mixin("Dang ky")
