@@ -1,0 +1,78 @@
+.title__mixin{
+    font-weight: bold;
+    color: $text-green;
+    font-size: 1.15rem;
+    padding: 3rem 0rem 1rem 0rem;
+    border-bottom: 1px solid $border-color-product;
+    margin-bottom: 1rem;
+    span{
+        padding-bottom: calc(1rem - 2px);
+        border-bottom: 3px solid $primary-color;
+    }
+}
+
+.card__product__mixin{
+    border: 1px solid $border-color-product;
+    margin-top: 22px;
+    .carđ__img{
+
+    }
+
+    .card__desc{
+        padding: 2.35rem 0rem;
+        @include flex-center;
+        flex-direction: column;
+        &__rate{
+            padding: .75rem 0;
+            @include flex-start;
+            img{
+                height: 1rem;
+            }
+        }
+        &__price{
+            @include flex-start;
+            .price__discount{
+                font-size: 18px;
+                font-weight: bold;
+                color: $price-color-red;
+                padding-right: .5rem;
+            }
+            .price__sold{
+                font-size: 16px;
+                color: $price-color-gray;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+
+.card__news__mixin{
+    .card__desc{
+        .news__time{
+            padding-top: 1rem;
+            line-height: 2rem;
+            font-size: .9rem;
+            font-style: italic;
+            color: $text-gray;
+        }
+        .news__title{
+            font-weight: bold;
+            font-size: 1rem;
+            color: $text-green;
+            line-height: 2rem;
+            padding-bottom: 1rem;
+        }
+        .news__desc{
+            font-size: 1rem;
+            color: $text-gray;
+            line-height: 1.5rem;
+
+        }
+        .news__btn{
+            font-size: 1rem;
+            font-style: italic;
+            color: $text-green;
+            padding: 1.5rem 0;
+        }
+    }
+}
