@@ -1,0 +1,176 @@
+mixin title__mixin(title)
+    .title__mixin
+        span= title 
+    
+
+mixin card__product__mixin(img,name,discount__price,price)
+    .card__product__mixin
+        .card__img 
+            img(src=img, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name 
+            .card__desc__rate 
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__price
+                .price__discount=discount__price
+                .price__sold=price
+
+mixin card__news__mixin(img, time, title, desc)
+    .card__news__mixin
+        .card__img 
+            img(src=img, alt="")
+        .card__desc
+            .news__time
+                span=time 
+            .news__title 
+                a(href="#")=title 
+            .news__desc 
+                p=desc
+            .news__btn 
+                a(href="#") Đọc tiếp
+
+mixin navigate__mixin(page)
+    .navigate__mixin 
+        span.root Home 
+        span.icon /
+        span.page=page
+
+mixin sidebar__news__mixin()
+    .sidebar__news__mixin 
+        .product__catalog
+            +title__mixin("Danh mục sản phẩm")
+            ul.product__list 
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây chậu cheo (10)
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây leo
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây leo
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây có quả
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây leo
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây có hoa
+                li 
+                    span 
+                        i.fa-solid.fa-angle-right 
+                    span Cây leo
+        .news__featured 
+            +title__mixin("Tin tức nổi bật")
+            ul.news__list 
+                li 
+                    img(src="./assets/images/products/news1.png", alt="")
+                    span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+                li 
+                    img(src="./assets/images/products/news1.png", alt="")
+                    span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+                li 
+                    img(src="./assets/images/products/news1.png", alt="")
+                    span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+                li 
+                    img(src="./assets/images/products/news1.png", alt="")
+                    span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+                li 
+                    img(src="./assets/images/products/news1.png", alt="")
+                    span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+        .blog__tag
+            +title__mixin("Blog tag")
+            ul.tag__list 
+                li Cây văn phòng 
+                li Cây cảnh 
+                li Cây xanh 
+                li Plans 
+                li Cây trang trí
+                li Quà tặng 
+                li Giải trí
+
+mixin card__news__mixin()
+    .card__news__mixin
+        .news__title 
+            a(href="./chitiettin.html") Cách bố trí chậu hoa trước cửa ấn tượng ngay ngày đầu tiên 
+        .news__time 
+            .item
+                i.fa-regular.fa-calendar-days 
+                span 22/02/2022
+            .item
+                i.fa-regular.fa-clock
+                span 10:15 AM
+            .item
+                i.fa-regular.fa-comments
+                span 0 Bình luận
+        .news__img 
+            img(src="./assets/images/products/news.png", alt="cayxanh")
+        .news__desc
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+
+mixin news__description__mixin()
+    .news__description__mixin
+        .news__title 
+            a(href="./chitiettin.html") Cách bố trí chậu hoa trước cửa ấn tượng ngay ngày đầu tiên 
+        .news__time 
+            .item
+                i.fa-regular.fa-calendar-days 
+                span 22/02/2022
+            .item
+                i.fa-regular.fa-clock
+                span 10:15 AM
+            .item
+                i.fa-regular.fa-comments
+                span 0 Bình luận
+        .news__img 
+            img(src="./assets/images/products/news.png", alt="cayxanh")
+        .news__desc
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+            p Là loài cây đặc trưng của vùng Địa Trung Hải, có lá cây mọng nước, đầu hơi nhọn, lá phát triển từ củ. Mỗi củ có thể tạo ra từ 7 đến 10 loại lá to nhỏ khác nhau.
+            p Khi đến lượt Apollo ném vòng, thần Zephur đã gom gió thổi mạnh làm chiếc vòng sắt rơi trúng thái dương Hyacinthus khiến chàng chết ngay lập tức chỉ vì sự ghen tuông của mình. Apollo đau đớn trước cái chết của chàng, nỗi đau tột cùng ấy đã tạo nên một bông hoa mang tên hoàng tử mọc lên từ máu của chàng.
+        .news__img 
+            img(src="./assets/images/products/news.png", alt="cayxanh")
+        .news__desc
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+
+mixin comment__card__mixin()
+    .comment__card__mixin 
+        .row
+            .user__avatar.col-2 
+                img(src="./assets/images/products/avatar.png", alt="avatar")
+            .user__desc.col-10  
+                .user__name 
+                    span Nguyễn Văn A
+                .user__cmt
+                    span Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây 
+                .user__time 
+                    span T7, 22/03/2003 12.00 AM
+        
+
+            
+
+
+                
+
+
+
+
+
+                
+
+

@@ -1,0 +1,112 @@
+extend ../layouts/default_layout.pug
+block content 
+    //- -var news =[{img="./assets/images/home-news-1.png",time="Thứ 5 ngày 22 tháng 2 năm 2001",title = "15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê",desc ="Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên"},{img="./assets/images/home-news-1.png",time="Thứ 5 ngày 22 tháng 2 năm 2001",title = "15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê",desc ="Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên"},{img="./assets/images/home-news-1.png",time="Thứ 5 ngày 22 tháng 2 năm 2001",title = "15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê",desc ="Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên"},]
+    .home 
+        .slide
+            #carouselExampleIndicators.carousel.slide
+                .carousel-indicators
+                    button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                    button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+                    button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='./assets/images/slide-1920x590.png' alt='...')
+                    .carousel-item
+                        img.d-block.w-100(src='./assets/images/slide-1920x590.png' alt='...')
+                    .carousel-item
+                        img.d-block.w-100(src='./assets/images/slide-1920x590.png' alt='...')
+                button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.visually-hidden Previous
+                button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.visually-hidden Next
+        .featured__products.container.container__base
+            .products__title 
+                +title__mixin("Sản phẩm nổi bật")
+            .products__container 
+                .row 
+                    .col-6 
+                        +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        .row 
+                            .col-6 
+                                +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                            .col-6 
+                                +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                    .col-6
+                        .row 
+                            .col-6 
+                                +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                            .col-6 
+                                +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+        .selling__product.container.container__base
+            .row
+                .product__list.col-3
+                    .products__title 
+                        +title__mixin("Sản phẩm mua nhiều")
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product__grid.col-9  
+                    .products__title.position-relative 
+                        +title__mixin("Sản phẩm giảm giá")
+                        .direct.position-absolute 
+                            i.fa-solid.fa-arrow-left
+                            i.fa-solid.fa-arrow-right
+                    .row 
+                        .product-item.col-4
+                             +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        .product-item.col-4
+                             +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        .product-item.col-4
+                             +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        .product-item.col-4
+                             +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        .product-item.col-4
+                             +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                        .product-item.col-4
+                             +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+        .home__banner.container.container__base
+            .banner__img
+                img(src="./assets/images/banner-11140x217.png", alt="abcd")
+        .new__product.container.container__base 
+            .products__title.position-relative  
+                +title__mixin("Sản phẩm mới")
+                .direct.position-absolute 
+                    i.fa-solid.fa-arrow-left
+                    i.fa-solid.fa-arrow-right
+            .row
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+                .product-item.col-3
+                    +card__product__mixin("./assets/images/products/spx2-4.png","Cây chân chim","120.000đ","150.000đ")
+        .news.container.container__base 
+            .news__title 
+                +title__mixin("Tin tức")
+
+            .row.news__grid
+                .news-item.col-4 
+                    +card__news__mixin("./assets/images/home-news-1.png","Thứ 5 ngày 22 tháng 2 năm 2001","15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê","Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên")
+                .news-item.col-4 
+                    +card__news__mixin("./assets/images/home-news-1.png","Thứ 5 ngày 22 tháng 2 năm 2001","15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê","Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên")
+                .news-item.col-4 
+                    +card__news__mixin("./assets/images/home-news-1.png","Thứ 5 ngày 22 tháng 2 năm 2001","15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê","Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên")
+
+                
+        
