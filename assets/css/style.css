@@ -155,6 +155,187 @@ body {
   padding: 1.5rem 0;
 }
 
+.navigate__mixin {
+  padding: 2rem 0 2rem 0;
+}
+.navigate__mixin span {
+  font-style: italic;
+  padding-right: 0.5rem;
+  line-height: 2rem;
+}
+.navigate__mixin span.page {
+  color: #3fb871;
+}
+
+.sidebar__news__mixin .product__catalog .product__list {
+  padding: 0 0 2rem 0;
+}
+.sidebar__news__mixin .product__catalog .product__list li {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 1rem;
+  color: #979797;
+}
+.sidebar__news__mixin .product__catalog .product__list li span {
+  padding-right: 0.3rem;
+}
+.sidebar__news__mixin .product__catalog .product__list li:hover {
+  color: #3fb871;
+}
+.sidebar__news__mixin .news__featured .title__mixin {
+  padding-top: 1rem;
+}
+.sidebar__news__mixin .news__featured .news__list {
+  font-weight: 500;
+  padding: 0 0 1rem 0;
+}
+.sidebar__news__mixin .news__featured .news__list li {
+  display: flex;
+  cursor: pointer;
+  color: rgba(44, 43, 43, 0.77);
+  padding-bottom: 1.8rem;
+  padding-right: 0.5rem;
+  line-height: 1.3rem;
+}
+.sidebar__news__mixin .news__featured .news__list li span {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+.sidebar__news__mixin .news__featured .news__list li span:hover {
+  color: #3fb871;
+}
+.sidebar__news__mixin .blog__tag {
+  padding: 0 0 4rem 0;
+}
+.sidebar__news__mixin .blog__tag .title__mixin {
+  padding-top: 0.2rem;
+}
+.sidebar__news__mixin .blog__tag .tag__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sidebar__news__mixin .blog__tag .tag__list li {
+  cursor: pointer;
+  padding: 0.7rem;
+  margin: 0 0.7rem 0.7rem 0;
+  border: 1px solid #e1e1e1;
+  display: inline-block;
+  color: #979797;
+  font-size: 1rem;
+}
+.sidebar__news__mixin .blog__tag .tag__list li:hover {
+  background-color: #3fb871;
+  color: #fff;
+}
+
+.card__news__mixin {
+  padding-bottom: 45px;
+}
+.card__news__mixin .news__title {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.card__news__mixin .news__title:hover {
+  color: #3fb871;
+}
+.card__news__mixin .news__time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.card__news__mixin .news__time .item {
+  font-size: 1rem;
+  padding-right: 1.5rem;
+}
+.card__news__mixin .news__time .item i {
+  color: #3fb871;
+  padding-right: 0.5rem;
+}
+.card__news__mixin .news__time .item span {
+  color: #979797;
+}
+.card__news__mixin .news__img {
+  padding-bottom: 2rem;
+}
+.card__news__mixin .news__desc {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #979797;
+}
+
+.news__description__mixin {
+  padding-bottom: 45px;
+}
+.news__description__mixin .news__title {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.news__description__mixin .news__title:hover {
+  color: #3fb871;
+}
+.news__description__mixin .news__time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.news__description__mixin .news__time .item {
+  font-size: 1rem;
+  padding-right: 1.5rem;
+}
+.news__description__mixin .news__time .item i {
+  color: #3fb871;
+  padding-right: 0.5rem;
+}
+.news__description__mixin .news__time .item span {
+  color: #979797;
+}
+.news__description__mixin .news__img {
+  padding-bottom: 2rem;
+}
+.news__description__mixin .news__desc {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #979797;
+}
+.news__description__mixin .news__desc p {
+  padding-bottom: 1rem;
+}
+
+.comment__card__mixin {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+  border-bottom: 2px solid #e1e1e1;
+}
+.comment__card__mixin .user__desc .user__name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.comment__card__mixin .user__desc .user__name:hover {
+  color: #3fb871;
+}
+.comment__card__mixin .user__desc .user__cmt {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #979797;
+  padding: 1rem 0;
+}
+.comment__card__mixin .user__desc .user__time {
+  font-size: 1rem;
+  color: #979797;
+  font-style: italic;
+}
+
 .home .selling__product .product__list .products__title {
   margin-bottom: 35px;
 }
@@ -223,6 +404,98 @@ body {
 }
 .home .news .news__grid {
   padding-top: 1.5rem;
+}
+
+.news .news__main .news__list {
+  padding-top: 42px;
+}
+.news .news__paginate {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 7rem;
+  font-size: 1rem;
+  color: #979797;
+  font-weight: 500;
+}
+.news .news__paginate button {
+  color: #979797;
+  margin-left: 0.7rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+}
+.news .news__paginate button:hover {
+  background-color: #3fb871;
+  color: white;
+}
+.news .news__paginate div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.news .news__paginate div .item {
+  margin-left: 0.7rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid #e1e1e1;
+}
+.news .news__paginate div .item:nth-child(1) {
+  background-color: #3fb871;
+  color: white;
+}
+.news .news__paginate div .item:hover {
+  background-color: #3fb871;
+  color: white;
+}
+
+.news__description .news__list {
+  padding-top: 42px;
+}
+.news__description .news__comments {
+  padding-bottom: 5rem;
+}
+.news__description .news__comments .comments__head {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.news__description .news__comments .user__reply {
+  margin-left: 10rem;
+}
+.news__description .news__create__comment {
+  padding-bottom: 15rem;
+}
+.news__description .news__create__comment .comment__head {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.news__description .news__create__comment .comment__box {
+  padding-top: 2.5rem;
+}
+.news__description .news__create__comment .comment__box div {
+  margin-bottom: 1rem;
+}
+.news__description .news__create__comment .comment__box .item input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e1e1e1;
+}
+.news__description .news__create__comment .comment__box .item textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e1e1e1;
+}
+.news__description .news__create__comment .button__cmt {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.news__description .news__create__comment .button__cmt button {
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  background-color: #3fb871;
+  color: #fff;
+}
+.news__description .news__create__comment .button__cmt button:hover {
+  opacity: 0.8;
 }
 
 header .header__top {
