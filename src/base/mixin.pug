@@ -20,6 +20,27 @@ mixin card__product__mixin(img,name,discount__price,price)
                 .price__discount=discount__price
                 .price__sold=price
 
+mixin card__product__list__mixin(img,name,description,discount__price)
+    .card__product__list__mixin
+        .card__img
+            img(src=img, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name
+            .card__desc__rate
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__description=description
+            .card__desc__price
+                .price__discount=discount__price
+            .card__desc__action
+                button Mua ngay
+                i.fa-solid.fa-magnifying-glass
+                i.fa-solid.fa-heart
+
 mixin card__news__mixin(img, time, title, desc)
     .card__news__mixin
         .card__img 

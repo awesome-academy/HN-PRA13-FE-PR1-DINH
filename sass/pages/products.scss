@@ -1,5 +1,6 @@
 .girds{
   .girds__main{
+    padding-bottom: 4rem;
     .girds__header {
       .girds__header--img {
         margin-bottom: 1.5rem;
@@ -17,8 +18,11 @@
         }
       }
     }
-    .girds__product {
-      padding-bottom: 3.5rem;
+    .girds__product__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 22px;
     }
   }
   .girds__paginate{

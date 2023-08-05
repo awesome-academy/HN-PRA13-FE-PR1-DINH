@@ -14,9 +14,6 @@
 .card__product__mixin{
     border: 1px solid $border-color-product;
     margin-top: 22px;
-    .carđ__img{
-
-    }
 
     .card__desc{
         padding: 2.35rem 0;
@@ -41,6 +38,69 @@
                 font-size: 16px;
                 color: $price-color-gray;
                 padding-left: .5rem;
+            }
+        }
+    }
+}
+
+.card__product__list__mixin{
+    border: 1px solid $border-color-product;
+    display: flex;
+    gap: 2.3rem;
+    .card__img {
+        width: 50%;
+    }
+    img {
+        height: 100%;
+    }
+    .card__desc{
+        align-items: start !important;
+        padding: 2.35rem 0;
+        @include flex-start;
+        flex-direction: column;
+        &__name {
+            font-size: 18px;
+        }
+        &__rate{
+            padding: .75rem 0;
+            @include flex-start;
+            img{
+                height: 1rem;
+            }
+        }
+        &__description {
+            font-size: 12px;
+            line-height: 18px;
+            color: $text-gray;
+        }
+        &__price{
+            @include flex-start;
+            padding: 20px 0;
+            .price__discount{
+                font-size: 18px;
+                font-weight: bold;
+                color: $price-color-red;
+            }
+        }
+        &__action {
+            display: flex;
+            gap: 12px;
+            button {
+                padding: 16px 36px;
+                background: $text-green;
+                color: $secondary-color;
+                font-size: 18px;
+                border-radius: 24px;
+            }
+            i {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 1px solid $price-color-gray;
+                margin: auto;
+                line-height: 45px;
+                text-align: center;
+                color: $footer-top-bg;
             }
         }
     }
