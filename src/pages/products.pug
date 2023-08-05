@@ -1,0 +1,55 @@
+extend ../layouts/default_layout.pug
+block content
+    .girds.container.container__base
+        +navigate__mixin("Danh sách sản phẩm")
+        .girds__main
+            .row.g-6
+                .girds__sidebar.col-3
+                    +sidebar__gird__mixin
+                .col-9
+                    .girds__header
+                        img.girds__header--img.d-block.w-100(src='./assets/images/gird.png' alt='...')
+                        .row
+                            .col-5.girds__header--icons
+                                i.fa-solid.fa-table-cells.active
+                                i.fa-solid.fa-list
+                            .col-7.d-flex.justify-content-between
+                                + arrowDropDown("Sắp xếp theo", "Tên sản phẩm")
+                                + arrowDropDown("Show", "15")
+                    .girds__product
+                        .row
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-15.png","Cây Dạ Lam","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-12.png","Cây Danh Dự","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-11.png","Cây chân chim","250.000đ","250.000đ")
+                        .row
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-2.png","Cây cọ ta","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-8.png","Cây dứa nhỏ","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-1.png","Cây đa búp đỏ","250.000đ","250.000đ")
+                        .row
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-14.png","Cây cọ ta","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-7.png","Cây dứa nhỏ","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-13.png","Cây đa búp đỏ","250.000đ","250.000đ")
+                        .row
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-10.png","Cây cọ ta","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-3.png","Cây dứa nhỏ","250.000đ","250.000đ")
+                            .col-4
+                                +card__product__mixin("./assets/images/products/spx2-5.png","Cây đa búp đỏ","250.000đ","250.000đ")
+        .girds__paginate
+                button.prev Trang trước
+                div
+                    .item 1
+                    .item 2
+                    .item 3
+                    .item 4
+                button.next Trang sau
