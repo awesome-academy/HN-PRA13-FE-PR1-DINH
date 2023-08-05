@@ -1,0 +1,23 @@
+extend ../layouts/default_layout.pug
+block content 
+    .news.container.container__base 
+        +navigate__mixin("Tin tức")
+        .news__main
+            .row.g-6 
+                .news__sidebar.col-3
+                    +sidebar__news__mixin
+                .news__list.col-9
+                    +card__news__mixin
+                    +card__news__mixin
+                    +card__news__mixin
+        .news__paginate 
+            button.prev Trang trước
+            div 
+                .item 1
+                .item 2
+                .item 3
+                .item 4
+            button.next Trang sau
+
+
+            

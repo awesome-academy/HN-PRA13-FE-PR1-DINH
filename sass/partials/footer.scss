@@ -1,0 +1,97 @@
+footer{
+    background-color: $footer-top-bg ;
+    color: $text-gray;
+    font-size: 1rem;
+    .footer__top{
+        padding: 2rem 0;
+        &__left{
+            .icon{
+                @include flex-start;
+                i{
+                    padding: .5rem 1rem .5rem 0;
+                }
+            }
+        }
+        &__right{
+            @include flex-between;
+            .footer__top__item{
+                p{
+                    margin-bottom: .5rem;
+                }
+            }
+            .footer__top__input{
+                height: 100%;
+                @include flex-start;
+                input{
+                    width: 400px;
+                    padding: 1rem 2rem;
+                    background-color: $secondary-color;
+                    }
+                .send{
+                    @include flex-center;
+                    background-color: $primary-color;
+                    height: 100%;
+                    width: 50px;
+                    font-size: 1.1rem;
+                    color: $text-white;
+                }
+            }
+        }
+    }
+    .footer__main{
+        padding: 2rem 0;
+        &__left{
+            .logo{
+                padding-bottom: 1rem;
+            }
+            .desc{
+                line-height: 2rem;
+                padding-bottom: 1rem;
+                &__phone, &__email{
+                    @include flex-start;
+                    span{
+                        padding-right: .5rem;
+                    }
+                }
+            }
+        }
+        &__right{
+            padding: 1.5rem 0;
+            line-height: 3rem;
+            font-size: .9rem;
+            .box__title{
+                color: $text-green;
+                font-size: 1rem;
+                font-weight: bold;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+    .footer__bottom{
+        border-top: 1px solid $footer-bottom-bg;
+        .footer__menu{
+            @include flex-between;
+            padding: 1rem 0;
+            &__left{
+                @include flex-start;
+                li{
+                    padding: 0 .75rem;
+                }
+            }
+            &__right{
+                @include flex-start;
+                li{
+                    padding: 0 .5rem;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .footer__sign{
+            @include flex-center;
+            padding: 1rem 0;
+            background-color: $footer-bottom-bg;
+        
+        }
+    }
+    
+}
