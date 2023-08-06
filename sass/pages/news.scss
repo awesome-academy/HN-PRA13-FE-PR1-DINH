@@ -1,0 +1,41 @@
+.news{
+    .news__main{
+        .news__list{
+            padding-top: 42px;
+        }
+    }
+    .news__paginate{
+        @include flex-end;
+        margin-bottom: 7rem;
+        font-size: 1rem;
+        color: $text-gray;
+        font-weight: 500;
+        button{
+            color: $text-gray;
+            margin-left: .7rem;
+            padding: 1rem;
+            border: 1px solid $border-color-product;
+            &:hover{
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+        div{
+            @include flex-start;
+
+            .item{
+                margin-left: .7rem;
+                padding: 1rem 1.4rem;
+                border: 1px solid $border-color-product;
+                &:nth-child(1){
+                    background-color: $primary-color;
+                    color: white;
+                }
+                &:hover{
+                    background-color: $primary-color;
+                    color: white;
+                }
+            }
+        }
+    }
+}

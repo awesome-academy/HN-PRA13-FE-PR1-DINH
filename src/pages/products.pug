@@ -1,0 +1,78 @@
+extend ../layouts/default_layout.pug
+block content
+    script.
+        var isGrid = true;
+        function showGird() {
+            isGrid = true;
+            const content = document.querySelector('#content');
+            const iconGird = document.querySelector('.girds__header--icons i.gird').classList
+            const iconList = document.querySelector('.girds__header--icons i.list').classList
+            iconGird.add('active');
+            iconList.remove('active');
+            content.innerHTML = '<div class="girds__product"><div class="row"><div class="col-4"><div class="card__product__mixin"><div class="card__img"><img src="./assets/images/products/spx2-15.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây Dạ Lam</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-12.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây Danh Dự</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-11.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây chân chim</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div></div><div class="row"><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-2.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây cọ ta</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-8.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây dứa nhỏ</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-1.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây đa búp đỏ</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div></div><div class="row"><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-14.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây cọ ta</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-7.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây dứa nhỏ</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-13.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây đa búp đỏ</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div></div><div class="row"><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-10.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây cọ ta</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-3.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây dứa nhỏ</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div><div class="col-4"><div class="card__product__mixin"><div class="card__img"> <img src="./assets/images/products/spx2-5.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây đa búp đỏ</a></div><div class="card__desc__rate"> <img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__price"><div class="price__discount">250.000đ</div><div class="price__sold">250.000đ</div></div></div></div></div></div></div>'
+        }
+
+        function showList() {
+            isGrid = false;
+            const content = document.querySelector('#content');
+            const iconGird = document.querySelector('.girds__header--icons i.gird').classList
+            const iconList = document.querySelector('.girds__header--icons i.list').classList
+            iconGird.remove('active');
+            iconList.add('active');
+            content.innerHTML = '<div class="girds__product__list"><div class="row"><div class="col-12"><div class="card__product__list__mixin"><div class="card__img"><img src="./assets/images/products/spx2-5.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây đa búp đỏ</a></div><div class="card__desc__rate"><img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__description">Cây Ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất để tặng bạn &quot;người ấy&quot; Ngọc Ngân (Valentine) không chỉ đẹp ở đốm lá xanh phiến trắng.</div><div class="card__desc__price"><div class="price__discount">250.000đ</div></div><div class="card__desc__action"><button>Mua ngay</button><i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-heart"></i></div></div></div></div></div><div class="row"><div class="col-12"><div class="card__product__list__mixin"><div class="card__img"><img src="./assets/images/products/spx2-5.png" alt="image"/></div><div class="card__desc"><div class="card__desc__name"><a href="#">Cây đa búp đỏ</a></div><div class="card__desc__rate"><img src="./assets/images/rate.png" alt="1"/><img src="./assets/images/rate.png" alt="2"/><img src="./assets/images/rate.png" alt="3"/><img src="./assets/images/rate.png" alt="4"/><img src="./assets/images/rate.png" alt="5"/></div><div class="card__desc__description">Cây Ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất để tặng bạn &quot;người ấy&quot; Ngọc Ngân (Valentine) không chỉ đẹp ở đốm lá xanh phiến trắng.</div><div class="card__desc__price"><div class="price__discount">250.000đ</div></div><div class="card__desc__action"><button>Mua ngay</button><i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-heart"></i></div></div></div></div></div></div>'
+        }
+
+    .girds.container.container__base
+        +navigate__mixin("Danh sách sản phẩm")
+        .girds__main
+            .row.g-6
+                .girds__sidebar.col-3
+                    +sidebar__gird__mixin
+                .col-9
+                    .girds__header
+                        img.girds__header--img.d-block.w-100(src='./assets/images/gird.png' alt='...')
+                        .row
+                            .col-5.girds__header--icons
+                                i.fa-solid.fa-table-cells.active.gird(onclick="showGird()")
+                                i.fa-solid.fa-list.list(onclick="showList()")
+                            .col-7.d-flex.justify-content-between
+                                + arrowDropDown("Sắp xếp theo", "Tên sản phẩm")
+                                + arrowDropDown("Show", "15")
+                    #content
+                        .girds__product
+                            .row
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-15.png","Cây Dạ Lam","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-12.png","Cây Danh Dự","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-11.png","Cây chân chim","250.000đ","250.000đ")
+                            .row
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-2.png","Cây cọ ta","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-8.png","Cây dứa nhỏ","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-1.png","Cây đa búp đỏ","250.000đ","250.000đ")
+                            .row
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-14.png","Cây cọ ta","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-7.png","Cây dứa nhỏ","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-13.png","Cây đa búp đỏ","250.000đ","250.000đ")
+                            .row
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-10.png","Cây cọ ta","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-3.png","Cây dứa nhỏ","250.000đ","250.000đ")
+                                .col-4
+                                    +card__product__mixin("./assets/images/products/spx2-5.png","Cây đa búp đỏ","250.000đ","250.000đ")
+        .girds__paginate
+                button.prev Trang trước
+                div
+                    .item 1
+                    .item 2
+                    .item 3
+                    .item 4
+                button.next Trang sau

@@ -1,0 +1,322 @@
+mixin title__mixin(title)
+    .title__mixin
+        span= title
+
+mixin title__icons__mixin(title)
+    .title__mixin
+        span= title
+        .icon
+            i.fa-solid.fa-chevron-up.icon__left
+            i.fa-solid.fa-chevron-up.icon__right
+
+mixin product__detail__desc__mixin()
+    .product__detail__desc__mixin
+        .desc__action
+            .desc__action__item.active Thông tin sản phẩm
+            .desc__action__item Khách hàng đánh giá
+            .desc__action__item Thẻ tag
+        .desc__content
+            p Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn.
+            p Tên khoa học: Calathea zabrina
+            p Họ thực vật: Marantaceae (Củ dong)
+            p Chiều cao: 0,8 - 1,2m
+            p Cây dạ lam có nguồn gô từ Brazill, được du nhập và phân bổ rộng khắp ở Việt Nam.
+            p Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt. Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh. Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng. Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.
+
+mixin card__product__mixin(img,name,discount__price,price)
+    .card__product__mixin
+        .card__img 
+            img(src=img, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name 
+            .card__desc__rate 
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__price
+                .price__discount=discount__price
+                .price__sold=price
+
+mixin card__product__list__mixin(img,name,description,discount__price)
+    .card__product__list__mixin
+        .card__img
+            img(src=img, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name
+            .card__desc__rate
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__description=description
+            .card__desc__price
+                .price__discount=discount__price
+            .card__desc__action
+                button Mua ngay
+                i.fa-solid.fa-magnifying-glass
+                i.fa-solid.fa-heart
+
+mixin card__product__detail__mixin(img, imgDetail1, imgDetail2, imgDetail3, imgDetail4, imgDetail5,name,description,discount__price, price)
+    .card__product__detail__mixin
+        .card__img
+            img(src=img, alt="image")
+            .card__img__detail
+                img(src=imgDetail1, alt="image")
+                img(src=imgDetail2, alt="image")
+                img(src=imgDetail3, alt="image")
+                img(src=imgDetail4, alt="image")
+                img(src=imgDetail5, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name
+            .card__desc__rate
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__price
+                .price__discount=discount__price
+                .price__sold=price
+            .card__desc__description=description
+            .card__desc__quantity
+                span Số lượng
+                .cal
+                    p.apart -
+                    p.result 1
+                    p.add +
+            .card__desc__action
+                button Mua ngay
+                i.fa-solid.fa-magnifying-glass
+                i.fa-solid.fa-heart
+            .card__desc__social
+                img(src="./assets/images/social.png", alt="social")
+
+mixin card__news__mixin(img, time, title, desc)
+    .card__news__mixin
+        .card__img 
+            img(src=img, alt="")
+        .card__desc
+            .news__time
+                span=time 
+            .news__title 
+                a(href="#")=title 
+            .news__desc 
+                p=desc
+            .news__btn 
+                a(href="#") Đọc tiếp
+
+mixin navigate__mixin(page)
+    .navigate__mixin 
+        span.root Home 
+        span.icon /
+        span.page=page
+
+mixin prodct__catalog__sidebar()
+    .product__catalog
+        +title__mixin("Danh mục sản phẩm")
+        ul.product__list
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây chậu treo (10)
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây có hoa
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây dây leo
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây để bàn
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây may mắn
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây trang trí
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span Cây nội thất
+
+mixin news__featured__sidebar()
+    .news__featured
+        +title__mixin("Tin tức nổi bật")
+        ul.news__list
+            li
+                img(src="./assets/images/products/news1.png", alt="")
+                span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+            li
+                img(src="./assets/images/products/news1.png", alt="")
+                span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+            li
+                img(src="./assets/images/products/news1.png", alt="")
+                span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+            li
+                img(src="./assets/images/products/news1.png", alt="")
+                span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+            li
+                img(src="./assets/images/products/news1.png", alt="")
+                span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+
+mixin blog__tag__sidebar()
+    .blog__tag
+        +title__mixin("Blog tag")
+        ul.tag__list
+            li Cây văn phòng
+            li Cây cảnh
+            li Cây xanh
+            li Plans
+            li Cây trang trí
+            li Quà tặng
+            li Giải trí
+
+mixin search__price__sidebar()
+    .product__catalog
+        +title__mixin("Tìm theo giá")
+        ul.product__list
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span 200.000 Đ - 400.000 Đ
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span 400.000 Đ - 600.000 Đ
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span 600.000 Đ - 800.000 Đ
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span 800.000 Đ - 1.000.000 Đ
+            li
+                span
+                    i.fa-solid.fa-angle-right
+                span 1.000.000 Đ - 2.000.000 Đ
+
+mixin search__color__sidebar()
+    .search__color
+        +title__mixin("Tìm theo màu")
+        ul.color__list
+            li
+                .color__item.green
+                p Xanh cây
+            li
+                .color__item.redOrange
+                p Đỏ cam
+            li
+                .color__item.violet
+                p Tím
+            li
+                .color__item.skyBlue
+                p Xanh trời
+            li
+                .color__item.yellow
+                p Vàng
+            li
+                .color__item.pink
+                p Hồng
+
+mixin sidebar__news__mixin()
+    .sidebar__news__mixin 
+        +prodct__catalog__sidebar
+        +news__featured__sidebar
+        +blog__tag__sidebar
+
+mixin sidebar__gird__mixin()
+    .sidebar__news__mixin
+        +prodct__catalog__sidebar
+        +search__price__sidebar
+        +search__color__sidebar
+
+mixin card__news__mixin()
+    .card__news__mixin
+        .news__title 
+            a(href="./chitiettin.html") Cách bố trí chậu hoa trước cửa ấn tượng ngay ngày đầu tiên 
+        .news__time 
+            .item
+                i.fa-regular.fa-calendar-days 
+                span 22/02/2022
+            .item
+                i.fa-regular.fa-clock
+                span 10:15 AM
+            .item
+                i.fa-regular.fa-comments
+                span 0 Bình luận
+        .news__img 
+            img(src="./assets/images/products/news.png", alt="cayxanh")
+        .news__desc
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+
+mixin news__description__mixin()
+    .news__description__mixin
+        .news__title 
+            a(href="./chitiettin.html") Cách bố trí chậu hoa trước cửa ấn tượng ngay ngày đầu tiên 
+        .news__time 
+            .item
+                i.fa-regular.fa-calendar-days 
+                span 22/02/2022
+            .item
+                i.fa-regular.fa-clock
+                span 10:15 AM
+            .item
+                i.fa-regular.fa-comments
+                span 0 Bình luận
+        .news__img 
+            img(src="./assets/images/products/news.png", alt="cayxanh")
+        .news__desc
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+            p Là loài cây đặc trưng của vùng Địa Trung Hải, có lá cây mọng nước, đầu hơi nhọn, lá phát triển từ củ. Mỗi củ có thể tạo ra từ 7 đến 10 loại lá to nhỏ khác nhau.
+            p Khi đến lượt Apollo ném vòng, thần Zephur đã gom gió thổi mạnh làm chiếc vòng sắt rơi trúng thái dương Hyacinthus khiến chàng chết ngay lập tức chỉ vì sự ghen tuông của mình. Apollo đau đớn trước cái chết của chàng, nỗi đau tột cùng ấy đã tạo nên một bông hoa mang tên hoàng tử mọc lên từ máu của chàng.
+        .news__img 
+            img(src="./assets/images/products/news.png", alt="cayxanh")
+        .news__desc
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên của một vị khách ghé thăm chơi nhà bạn đấy. Hãy cùng tôi tham khảo một vài cách bố trí cây chậu hoa trước cửa nhà sao cho ấn tượng nhất nhé!
+
+mixin comment__card__mixin()
+    .comment__card__mixin 
+        .row
+            .user__avatar.col-2 
+                img(src="./assets/images/products/avatar.png", alt="avatar")
+            .user__desc.col-10  
+                .user__name 
+                    span Nguyễn Văn A
+                .user__cmt
+                    span Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước nhà được đầu tư mạnh mẽ và trang trí khá bắt mắt. Cũng có thể nói đây 
+                .user__time 
+                    span T7, 22/03/2003 12.00 AM
+
+mixin arrowDropDown(title, value)
+    .arrowDropDown
+        p=title
+        .dropDown
+            p=value
+            i.fa-solid.fa-caret-down
+
+            
+
+
+                
+
+
+
+
+
+                
+
+
