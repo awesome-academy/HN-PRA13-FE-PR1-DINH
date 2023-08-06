@@ -1,7 +1,27 @@
 mixin title__mixin(title)
     .title__mixin
-        span= title 
-    
+        span= title
+
+mixin title__icons__mixin(title)
+    .title__mixin
+        span= title
+        .icon
+            i.fa-solid.fa-chevron-up.icon__left
+            i.fa-solid.fa-chevron-up.icon__right
+
+mixin product__detail__desc__mixin()
+    .product__detail__desc__mixin
+        .desc__action
+            .desc__action__item.active Thông tin sản phẩm
+            .desc__action__item Khách hàng đánh giá
+            .desc__action__item Thẻ tag
+        .desc__content
+            p Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn.
+            p Tên khoa học: Calathea zabrina
+            p Họ thực vật: Marantaceae (Củ dong)
+            p Chiều cao: 0,8 - 1,2m
+            p Cây dạ lam có nguồn gô từ Brazill, được du nhập và phân bổ rộng khắp ở Việt Nam.
+            p Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt. Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh. Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng. Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.
 
 mixin card__product__mixin(img,name,discount__price,price)
     .card__product__mixin
@@ -40,6 +60,42 @@ mixin card__product__list__mixin(img,name,description,discount__price)
                 button Mua ngay
                 i.fa-solid.fa-magnifying-glass
                 i.fa-solid.fa-heart
+
+mixin card__product__detail__mixin(img, imgDetail1, imgDetail2, imgDetail3, imgDetail4, imgDetail5,name,description,discount__price, price)
+    .card__product__detail__mixin
+        .card__img
+            img(src=img, alt="image")
+            .card__img__detail
+                img(src=imgDetail1, alt="image")
+                img(src=imgDetail2, alt="image")
+                img(src=imgDetail3, alt="image")
+                img(src=imgDetail4, alt="image")
+                img(src=imgDetail5, alt="image")
+        .card__desc
+            .card__desc__name
+                a(href="#")=name
+            .card__desc__rate
+                img(src="./assets/images/rate.png", alt="1")
+                img(src="./assets/images/rate.png", alt="2")
+                img(src="./assets/images/rate.png", alt="3")
+                img(src="./assets/images/rate.png", alt="4")
+                img(src="./assets/images/rate.png", alt="5")
+            .card__desc__price
+                .price__discount=discount__price
+                .price__sold=price
+            .card__desc__description=description
+            .card__desc__quantity
+                span Số lượng
+                .cal
+                    p.apart -
+                    p.result 1
+                    p.add +
+            .card__desc__action
+                button Mua ngay
+                i.fa-solid.fa-magnifying-glass
+                i.fa-solid.fa-heart
+            .card__desc__social
+                img(src="./assets/images/social.png", alt="social")
 
 mixin card__news__mixin(img, time, title, desc)
     .card__news__mixin

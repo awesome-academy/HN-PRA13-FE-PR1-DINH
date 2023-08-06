@@ -86,10 +86,31 @@ body {
   padding: 3rem 0 1rem 0;
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .title__mixin span {
   padding-bottom: calc(1rem - 2px);
   border-bottom: 3px solid #3fb871;
+}
+.title__mixin .icon {
+  margin: auto 0;
+}
+.title__mixin .icon i {
+  font-size: 8px;
+  color: #7d7d7d;
+  border: 1px solid #e1e1e1;
+  padding: 4px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.title__mixin .icon__left {
+  transform: rotate(-90deg);
+}
+.title__mixin .icon__right {
+  transform: rotate(90deg);
 }
 
 .card__product__mixin {
@@ -127,6 +148,7 @@ body {
   font-size: 16px;
   color: #9c9c9c;
   padding-left: 0.5rem;
+  text-decoration: line-through;
 }
 
 .card__product__list__mixin {
@@ -145,7 +167,6 @@ body {
   padding: 2.35rem 0;
   display: flex;
   justify-content: start;
-  align-items: center;
   flex-direction: column;
 }
 .card__product__list__mixin .card__desc__name {
@@ -196,6 +217,128 @@ body {
   line-height: 45px;
   text-align: center;
   color: #313131;
+}
+
+.card__product__detail__mixin {
+  display: flex;
+  gap: 2.3rem;
+}
+.card__product__detail__mixin .card__img {
+  width: 120%;
+}
+.card__product__detail__mixin .card__img img {
+  width: 462px;
+  height: 430px;
+}
+.card__product__detail__mixin .card__img__detail {
+  display: flex;
+  gap: 10px;
+  margin-top: 26px;
+}
+.card__product__detail__mixin .card__img__detail img {
+  width: 84px;
+  height: 84px;
+}
+.card__product__detail__mixin img {
+  height: 100%;
+}
+.card__product__detail__mixin .card__desc {
+  align-items: start !important;
+  padding: 2.35rem 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+.card__product__detail__mixin .card__desc__name {
+  font-size: 18px;
+}
+.card__product__detail__mixin .card__desc__rate {
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.card__product__detail__mixin .card__desc__rate img {
+  height: 1rem;
+}
+.card__product__detail__mixin .card__desc__description {
+  font-size: 12px;
+  line-height: 18px;
+  color: #979797;
+  padding: 20px 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.card__product__detail__mixin .card__desc__price {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 20px 0;
+}
+.card__product__detail__mixin .card__desc__price .price__discount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ed1c24;
+  padding-right: 0.5rem;
+}
+.card__product__detail__mixin .card__desc__price .price__sold {
+  font-size: 16px;
+  color: #9c9c9c;
+  padding-left: 0.5rem;
+  text-decoration: line-through;
+}
+.card__product__detail__mixin .card__desc__quantity {
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e1e1;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.card__product__detail__mixin .card__desc__quantity span {
+  margin: auto 0;
+}
+.card__product__detail__mixin .card__desc__quantity .cal {
+  display: flex;
+  gap: 10px;
+}
+.card__product__detail__mixin .card__desc__quantity .cal p {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  line-height: 40px;
+}
+.card__product__detail__mixin .card__desc__quantity .cal p.result {
+  cursor: context-menu;
+  padding: 0 10px;
+  width: 70px;
+  font-size: 14px;
+}
+.card__product__detail__mixin .card__desc__action {
+  display: flex;
+  gap: 12px;
+  padding-top: 20px;
+}
+.card__product__detail__mixin .card__desc__action button {
+  padding: 16px 36px;
+  background: #3fb871;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 24px;
+}
+.card__product__detail__mixin .card__desc__action i {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #9c9c9c;
+  margin: auto;
+  line-height: 45px;
+  text-align: center;
+  color: #313131;
+}
+.card__product__detail__mixin .card__desc__social {
+  margin-top: 24px;
 }
 
 .card__news__mixin .card__desc .news__time {
@@ -460,13 +603,50 @@ body {
 .arrowDropDown .dropDown {
   display: flex;
   gap: 0.5rem;
-  border: 1px solid #979797;
+  border: 1px solid #e1e1e1;
   padding: 1rem 1.25rem;
   margin: auto;
   cursor: pointer;
 }
 .arrowDropDown .dropDown i {
   color: #898989;
+}
+
+.product__detail__desc__mixin {
+  margin-top: 110px;
+}
+.product__detail__desc__mixin .desc__action {
+  display: flex;
+  justify-content: space-around;
+}
+.product__detail__desc__mixin .desc__action__item {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  flex: 1;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: pointer;
+}
+.product__detail__desc__mixin .desc__action__item.active {
+  color: #3fb871;
+  border-top: 2px solid #202020;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 0;
+}
+.product__detail__desc__mixin .desc__content {
+  font-size: 12px;
+  line-height: 18px;
+  color: #7d7d7d;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 48px 40px;
+  border: 1px solid #e1e1e1;
+  border-top: 0;
 }
 
 .home .selling__product .product__list .products__title {
