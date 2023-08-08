@@ -491,6 +491,34 @@
         </div>
       </div>
     </div>
+    <div class="popup" id="modal">
+      <div class="popup__blur"> </div>
+      <div class="popup__box">
+        <div class="popup__header"> <i class="fa-solid fa-xmark closeButton"></i></div>
+        <div class="popup__main row"> 
+          <div class="img col-6"> <img src="./assets/images/products/flowers.png" alt="hoa"></div>
+          <div class="popup__right col-6">
+            <div class="title"> 
+              <div class="img"> <img src="./assets/images/products/text__popup.png" alt="Nhanqt"></div>
+              <div> <span>ĐĂNG KÝ EMAIL NGAY HÔM NAY</span></div>
+              <form action="help" method="post"> 
+                <div class="input"> 
+                  <input type="text" placeholder="Nhập email tại đây">
+                  <div class="send"> <i class="fa-solid fa-paper-plane"></i></div>
+                </div>
+                <div class="desc"> 
+                  <p>Đăng ký thông tin ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi </p>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="remember" name="remember">
+                  <label for="remember">Không hiển thị lại thông báo này nữa</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="footer__container container container__base">
@@ -597,4 +625,24 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var popup = document.querySelector('.popup');
+      var popupBlur = document.querySelector('.popup__blur');
+      var closeButton = document.querySelector('.closeButton');
+    
+      closeButton.onclick = function () {
+        popup.style.display = 'none';
+      };
+      popupBlur.onclick = function () {
+        popup.style.display = 'none';
+      };
+      
+      //- window.onclick = function (event) {
+      //-   if (event.target === modal) {
+      //-     popup.style.display = 'none';
+      //-   }
+      //- };
+    });
+  </script>
 </html>

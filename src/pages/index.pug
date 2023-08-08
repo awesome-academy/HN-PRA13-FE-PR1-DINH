@@ -107,6 +107,30 @@ block content
                     +card__home__news__mixin("./assets/images/home-news-1.png","Thứ 5 ngày 22 tháng 2 năm 2001","15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê","Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên")
                 .news-item.col-4 
                     +card__home__news__mixin("./assets/images/home-news-1.png","Thứ 5 ngày 22 tháng 2 năm 2001","15 Thiết kế phòng ngủ tuyệt đẹp làm vạn người mê","Khi bước đến góc này trong nhà đi ra góc sân chỗ này là chỗ nhìn đầu tiên")
+        .popup#modal
+            .popup__blur 
+            .popup__box
+                .popup__header 
+                    i.fa-solid.fa-xmark.closeButton
+                .popup__main.row 
+                    .img.col-6 
+                        img(src="./assets/images/products/flowers.png", alt="hoa")
+                    .popup__right.col-6
+                        .title 
+                            .img 
+                                img(src="./assets/images/products/text__popup.png", alt="Nhanqt")
+                            div 
+                                span ĐĂNG KÝ EMAIL NGAY HÔM NAY
+                            form(action="help", method="post") 
+                                .input 
+                                    input(type="text" placeholder="Nhập email tại đây")
+                                    .send 
+                                        i.fa-solid.fa-paper-plane
+                                .desc 
+                                    p Đăng ký thông tin ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi 
+                                .checkbox
+                                    input(type="checkbox", id="remember", name="remember")
+                                    label(for="remember") Không hiển thị lại thông báo này nữa
 
                 
         
