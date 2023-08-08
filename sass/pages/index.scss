@@ -1,0 +1,177 @@
+.home{
+    .featured__products{
+
+    }
+    .selling__product{
+        .product__list{
+            .products__title{
+                margin-bottom: 35px
+            }
+            .card__product__mixin{
+                @include flex-start;
+                font-size: 1rem;
+                border: none;
+                border-bottom: 1px solid $border-color-product !important;
+                border-left: 1px solid $border-color-product !important;
+                border-right: 1px solid $border-color-product !important;
+                margin-top: 0 !important;
+                .card__img{
+                    padding: 0rem .5rem 0rem 1rem;
+                    img{
+                        height: 80px;
+                    }
+                }
+                .card__desc{
+                    align-items: start !important;
+                    padding: 2.035rem 0rem;
+                }
+                .price__sold{
+                    display: none;
+                }
+                &:nth-child(1){
+
+                    background-color: red;
+                    border-top: 1px solid $border-color-product !important;
+                }
+            }
+            
+        }
+        .product__grid{
+            .products__title{
+                .direct{
+                    right: 0;
+                    bottom: 5px;
+                    cursor: pointer;
+                    font-size: .7rem;
+                    color: $text-gray;
+                    i{
+                        margin-left: .5rem;
+                        padding: .3rem;
+                        border: 1px solid $border-color-product;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .new__product{
+        .products__title{
+            .direct{
+                right: 0;
+                bottom: 5px;
+                cursor: pointer;
+                font-size: .7rem;
+                color: $text-gray;
+                i{
+                    margin-left: .5rem;
+                    padding: .3rem;
+                    border: 1px solid $border-color-product;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .home__banner{
+        padding: 2rem 0 1rem 0;
+        .banner__img{
+            padding: 0 10.5px;
+        }
+    }
+    .news{
+        padding-bottom: 3rem;
+       
+        .news__grid{
+            padding-top: 1.5rem;
+
+        }
+    }
+    .popup{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+        @include flex-center;
+        &__blur{
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.4);
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+        &__box{
+            z-index: 99;
+            max-width: 800px;
+            margin: auto;
+            background-color: $popup-bg;
+            margin: 1rem;
+            .popup__header{
+                width: 100%;
+                @include flex-end;
+                i{
+                    padding: 1rem 1rem 0 0;
+                    font-size: 2rem;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+            .popup__main{
+                padding: 1rem 3rem 4rem 1rem;
+                .img{
+                    img{
+                        max-width: 100%;
+                        padding-bottom: .5rem;
+                    }
+                }
+                .popup__right{
+                    span{
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        color: $primary-color;
+                    }
+                    form{
+                        .input{
+                            padding-top: 2rem;
+                            @include flex-start;
+                            input{
+                                width: 400px;
+                                height: 40px;
+                                padding: 1rem 1rem;
+                                color: $text-gray;
+                                font-size: .9rem;
+                                background-color: $secondary-color;
+                                }
+                            .send{
+                                @include flex-center;
+                                background-color: $primary-color;
+                                width: 50px;
+                                height: 40px;
+                                font-size: 1.1rem;
+                                color: $text-white;
+                                cursor: pointer;
+                            }
+                        }
+                        .desc{
+                            font-size: .9rem;
+                            color: $text-gray;
+                            padding-top: 1rem;
+                            line-height: 1.5rem;
+                        }
+                        .checkbox{
+                            padding-top: 2rem;
+                            font-size: .9rem;
+                            color: $text-gray;
+                            label{
+                                padding-left: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
