@@ -620,6 +620,56 @@ body {
   opacity: 0.8;
 }
 
+.contact {
+  margin-bottom: 15rem;
+}
+.contact .contact__map iframe {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.contact .contact__info {
+  font-size: 1rem;
+}
+.contact .contact__info .contact__form {
+  padding-right: 2rem;
+}
+.contact .contact__info .contact__form .contact__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3fb871;
+  padding: 2rem 0;
+}
+.contact .contact__info .contact__form label {
+  padding: 2rem 0 1rem 0;
+}
+.contact .contact__info .contact__form label::after {
+  content: "*";
+  color: red;
+}
+.contact .contact__info .contact__form textarea {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+}
+.contact .contact__info .contact__desc {
+  margin-top: 100px;
+  color: #979797;
+}
+.contact .contact__info .contact__desc .logo {
+  padding-bottom: 2rem;
+}
+.contact .contact__info .contact__desc p {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  line-height: 1.5rem;
+}
+.contact .contact__info .contact__desc .phone, .contact .contact__info .contact__desc .email {
+  padding-bottom: 1rem;
+}
+.contact .contact__info .contact__desc .phone i, .contact .contact__info .contact__desc .email i {
+  padding-right: 1rem;
+  color: #3fb871;
+}
+
 header .header__top {
   height: 32px;
   background-color: #202020;

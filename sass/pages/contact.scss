@@ -1,0 +1,55 @@
+.contact{
+    margin-bottom: 15rem;
+    .contact__map{
+        iframe{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+    .contact__info{          
+        font-size: 1rem;
+        .contact__form{
+            padding-right: 2rem;
+            .contact__title{
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: $primary-color;
+                padding: 2rem 0;
+            }
+            label{
+                padding: 2rem 0 1rem 0;
+                &::after{
+                    content: "*";
+                    color: red;
+                }
+            }
+            textarea{
+                width: 100%;
+                border: 1px solid $border-color-product;
+               
+            }
+           
+        }
+        .contact__desc{
+            margin-top: 100px;
+            color: $text-gray;
+            .logo{
+                padding-bottom: 2rem;
+            }
+            p{
+                font-size: 1rem;
+                padding-bottom: 2rem;
+                line-height: 1.5rem;
+
+            }
+            .phone, .email{
+                padding-bottom: 1rem;
+                i{
+                    padding-right: 1rem;
+                    color: $primary-color;
+                }
+            }
+        }
+        
+    }
+}

@@ -20,7 +20,7 @@ mixin card__product__mixin(img,name,discount__price,price)
                 .price__discount=discount__price
                 .price__sold=price
 
-mixin card__news__mixin(img, time, title, desc)
+mixin card__home__news__mixin(img, time, title, desc)
     .card__news__mixin
         .card__img 
             img(src=img, alt="")
@@ -28,11 +28,11 @@ mixin card__news__mixin(img, time, title, desc)
             .news__time
                 span=time 
             .news__title 
-                a(href="#")=title 
+                a(href="./chitiettin.html")=title 
             .news__desc 
                 p=desc
             .news__btn 
-                a(href="#") Đọc tiếp
+                a(href="./chitiettin.html") Đọc tiếp
 
 mixin navigate__mixin(page)
     .navigate__mixin 
