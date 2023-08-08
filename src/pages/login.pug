@@ -1,0 +1,29 @@
+extend ../layouts/default_layout.pug
+block content 
+    .login.container.container__base 
+        +navigate__mixin("Đăng nhập")
+
+        .row 
+            .col-6
+                .login__title 
+                    span THÔNG TIN CÁ NHÂN
+                form(action="/register", method="POST")
+                    +input__text__mixin("Họ và tên", "name", "name")
+                    +input__text__mixin("Mật khẩu", "password" , "password")
+                    .checkbox 
+                        input(type="checkbox", id="remember", name="remember")
+                        label(for="remember") Nhớ mật khẩu!
+                        span Quên mật khẩu ???
+                    
+                    .form__btn 
+                        .btn__submit
+                            +input__submit__mixin("Đăng nhập")
+            .col-6 
+                .login__title 
+                    span BẠN CHƯA CÓ TÀI KHOẢN
+                .login__desc 
+                    p Đăng ký tài khoản ngay để có thể nhận ngay ưu đãi và mua hàng nhanh chóng! Ngoài ra còn có rất nhiều ưu đãi và chính sách tốt ????
+                .login__btn__direct 
+                    a(href="./register.html") 
+                        +input__submit__mixin("Đăng ký")
+                    

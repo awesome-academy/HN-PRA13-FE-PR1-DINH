@@ -1,0 +1,33 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-start{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+@mixin flex-end{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@mixin input__submit__mixin($text-color, $bg-color, $border-color){
+    padding: 1rem 2.5rem;
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    border-radius: 50px;
+    &:hover{
+        opacity: .8;
+    }
+}
