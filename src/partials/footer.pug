@@ -1,0 +1,94 @@
+- var supports = ["Hệ thống cửa hàng", "Hướng dẫn mua hàng", "Hướng dẫn thanh toán", "Tích điểm đổi quà", "Câu hỏi thường gặp"]
+
+footer
+    .footer__container.container.container__base
+        .footer__top.row.gx-0
+            .footer__top__left.text-uppercase.col-lg-4
+                p Kênh thông tin từ chúng tôi 
+                .icon 
+                    i.fa-brands.fa-facebook
+                    i.fa-brands.fa-twitter
+                    i.fa-brands.fa-tiktok
+                    i.fa-brands.fa-vimeo-v
+            .footer__top__right.col-lg-8.text-uppercase
+                .footer__top__item 
+                    p Đăng ký nhận 
+                    p Email từ chúng tôi
+                .footer__top__input
+                    input(type="text")
+                    .send 
+                        i.fa-solid.fa-paper-plane
+        .footer__main.row.gx-0
+            .footer__main__left.col-lg-4
+                .logo 
+                    img(src="./assets/images/GreenShop.png", alt="")
+                .desc 
+                    p Green shop được thành lập từ lâu rồi, được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triên
+                    .desc__contact 
+                        .desc__phone 
+                            span 
+                                i.fa-brands.fa-facebook
+                            p Điện thoại: 09999999999
+                        .desc__email 
+                            span 
+                                i.fa-brands.fa-facebook
+                            p Email: Green.Shop@gmail.com
+            .footer__main__right.col-lg-8.row
+                .main__right__box.col-lg-3
+                    .box__title 
+                        span.text-uppercase Hỗ trợ dịch vụ
+                    .box__item
+                        ul 
+                            each item in supports 
+                                li= item
+                .main__right__box.col-lg-3
+                    .box__title 
+                        span.text-uppercase Hỗ trợ dịch vụ
+                    .box__item
+                        ul 
+                            each item in supports 
+                                li= item
+                .main__right__box.col-lg-3
+                    .box__title 
+                        span.text-uppercase Hỗ trợ dịch vụ
+                    .box__item
+                        ul 
+                            each item in supports 
+                                li= item
+                .main__right__box.col-lg-3
+                    .box__title 
+                        span.text-uppercase Hỗ trợ dịch vụ
+                    .box__item
+                        ul 
+                            each item in supports 
+                                li= item
+        .footer__bottom
+            .footer__menu
+                ul.footer__menu__left 
+                    li  
+                        a(href="#") sitemap
+                    li 
+                        a(href="#") Danh mục sản phẩm
+                    li 
+                        a(href="#") Hợp tác
+                    li 
+                        a(href="#") Thông tin liên hệ
+                    li 
+                        a(href="#") Câu hỏi thường gặp
+                ul.footer__menu__right
+                    li 
+                        a(href="")
+                            i.fa-brands.fa-cc-visa 
+                    li 
+                        a(href="")
+                            i.fa-brands.fa-cc-visa 
+                    li 
+                        a(href="")
+                            i.fa-brands.fa-cc-visa 
+                    li 
+                        a(href="")
+                            i.fa-brands.fa-cc-visa 
+            .footer__sign
+                    i.fa-regular.fa-copyright 
+                    span Design Dinhuty
+
