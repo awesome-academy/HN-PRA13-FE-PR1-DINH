@@ -33,6 +33,26 @@
     }
 }
 
+.color__primary {
+    color: $text-green !important;
+    text-transform: uppercase;
+}
+
+.button__mixin {
+    padding: 12px 24px;
+    border: 1px solid;
+    border-radius: 20px;
+    color: $text-green;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+
+    &.active {
+        background: $text-green;
+        color: $text-white;
+    }
+}
+
 .card__product__mixin{
     border: 1px solid $border-color-product;
     margin-top: 22px;
