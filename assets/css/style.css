@@ -126,6 +126,11 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 12px;
+  transition: all 0.5s ease;
+}
+.button__mixin:hover {
+  transition: all 0.5s ease;
+  transform: scale(0.9);
 }
 .button__mixin.active {
   background: #3fb871;
@@ -135,6 +140,19 @@ body {
 .card__product__mixin {
   border: 1px solid #e1e1e1;
   margin-top: 22px;
+}
+.card__product__mixin:hover {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+}
+.card__product__mixin .card__img {
+  overflow: hidden;
+}
+.card__product__mixin .card__img img {
+  transition: all 0.5s ease;
+}
+.card__product__mixin .card__img img:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }
 .card__product__mixin .card__desc {
   padding: 2.35rem 0;
@@ -177,6 +195,14 @@ body {
 }
 .card__product__list__mixin .card__img {
   width: 50%;
+  overflow: hidden;
+}
+.card__product__list__mixin .card__img img {
+  transition: all 0.5s ease;
+}
+.card__product__list__mixin .card__img img:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.2);
 }
 .card__product__list__mixin img {
   height: 100%;
@@ -227,6 +253,11 @@ body {
   color: #ffffff;
   font-size: 18px;
   border-radius: 24px;
+  transition: all 0.5s ease;
+}
+.card__product__list__mixin .card__desc__action button:hover {
+  transition: all 0.5s ease;
+  transform: scale(0.9);
 }
 .card__product__list__mixin .card__desc__action i {
   width: 45px;
@@ -237,6 +268,12 @@ body {
   line-height: 45px;
   text-align: center;
   color: #313131;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.card__product__list__mixin .card__desc__action i:hover {
+  transition: all 0.5s ease;
+  transform: scale(0.9);
 }
 
 .card__product__detail__mixin {
@@ -625,12 +662,18 @@ body {
   display: flex;
   gap: 0.5rem;
   border: 1px solid #e1e1e1;
-  padding: 1rem 1.25rem;
   margin: auto;
   cursor: pointer;
 }
 .arrowDropDown .dropDown i {
+  margin: auto;
   color: #898989;
+  padding-right: 1.25rem;
+}
+.arrowDropDown .dropDown select {
+  padding: 1rem 1.25rem;
+  -webkit-appearance: none;
+  cursor: pointer;
 }
 
 .product__detail__desc__mixin {
@@ -928,6 +971,12 @@ body {
 table {
   width: 100%;
   border-color: #ebebeb;
+}
+table tr {
+  cursor: pointer;
+}
+table tr:hover {
+  background: #ebebeb;
 }
 table th, table td {
   padding: 16px;

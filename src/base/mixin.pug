@@ -30,8 +30,8 @@ mixin product__detail__desc__mixin()
             p Cây dạ lam có nguồn gô từ Brazill, được du nhập và phân bổ rộng khắp ở Việt Nam.
             p Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt. Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh. Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng. Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.
 
-mixin card__product__mixin(img,name,discount__price,price)
-    .card__product__mixin
+mixin card__product__mixin(img,name,discount__price,price, onClick)
+    .card__product__mixin(onclick=onClick)
         .card__img 
             img(src=img, alt="image")
         .card__desc
@@ -308,12 +308,21 @@ mixin comment__card__mixin()
                 .user__time 
                     span T7, 22/03/2003 12.00 AM
 
-mixin arrowDropDown(title, value)
+mixin arrowDropDown(title, options)
     .arrowDropDown
         p=title
         .dropDown
-            p=value
+            select.custom-select(name=title)
+                each option in options
+                    option(value=option.value)= option.label
             i.fa-solid.fa-caret-down
+
+mixin selectComponent(name, options)
+    select.custom-select(name=name)
+        each option in options
+            option(value=option.value)= option.label
+    span.dropdown-icon
+        i.fa.fa-caret-down
 
             
 
