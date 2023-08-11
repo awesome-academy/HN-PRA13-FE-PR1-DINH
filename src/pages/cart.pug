@@ -1,0 +1,57 @@
+extend ../layouts/default_layout.pug
+block content
+    .cart.container.container__base
+        +navigate__mixin("Giỏ hàng")
+        .cart__main
+            .cart__title
+                span Giỏ hàng
+            .cart__table
+                table.text-center.table-bordered
+                    thead
+                        tr
+                            th Hình ảnh
+                            th Tên sản phẩm
+                            th Đơn giá
+                            th Số lượng
+                            th Thành tiền
+                            th Xóa
+                    tbody
+                        tr
+                            td.img
+                                img(src="./assets/images/products/spx2-15.png", alt="1")
+                            td.name.color__primary Cây văn phòng
+                            td.price 270.000 đ
+                            td.quantity
+                                p 1
+                            td.price 270.000 đ
+                            td.icon
+                                i.fa.fa-trash
+
+                        tr
+                            td.img
+                                img(src="./assets/images/products/spx2-7.png", alt="Hình ảnh sản phẩm")
+                            td.name.color__primary Cây văn phòng
+                            td.price 270.000 đ
+                            td.quantity
+                                p 1
+                            td.price 270.000 đ
+                            td.icon
+                                i.fa.fa-trash
+            .cart__button.d-flex.justify-content-end.gap-3
+                +button__mixin("Hủy đơn hàng")
+                +button__active__mixin("Tiếp tục mua")
+            .cart__pay.d-flex.justify-content-end
+                table.text-center.table-bordered
+                    tbody
+                        tr
+                            td Tổng tiền (Chưa thuế)
+                            td 270.000 đ
+                    tbody
+                        tr
+                            td Thuế (Vat 10%)
+                            td 27.000 đ
+                        tr
+                            th Tổng phải thanh toán
+                            th 297.000 đ
+            .cart__button.d-flex.justify-content-end
+                +button__active__mixin("Thanh toán")

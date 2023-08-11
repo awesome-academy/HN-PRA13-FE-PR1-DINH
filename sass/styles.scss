@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+// Base
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/global";
+@import "./base/mixin";
+@import "./base/mixin_pug";
+
+// Pages
+
+@import "./pages/index";
+@import "./pages/news";
+@import "./pages/products";
+@import "./pages/chitiettin";
+@import "./pages/productDetail";
+@import "./pages/cart";
+
+// Partical
+
+@import "./partials/header";
+@import "./partials/footer";

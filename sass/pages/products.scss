@@ -1,0 +1,62 @@
+.girds{
+  .girds__main{
+    padding-bottom: 4rem;
+    .girds__header {
+      .girds__header--img {
+        margin-bottom: 1.5rem;
+      }
+      .girds__header--icons {
+        margin: auto;
+        display: flex;
+        gap: 0.5rem;
+        color: $price-color-gray;
+        i {
+          cursor: pointer;
+         &.active {
+           color: $text-green;
+         }
+        }
+      }
+    }
+    .girds__product__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 22px;
+    }
+  }
+  .girds__paginate{
+    @include flex-end;
+    margin-bottom: 7rem;
+    font-size: 1rem;
+    color: $text-gray;
+    font-weight: 500;
+    button{
+      color: $text-gray;
+      margin-left: .7rem;
+      padding: 1rem;
+      border: 1px solid $border-color-product;
+      &:hover{
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+    div{
+      @include flex-start;
+
+      .item{
+        margin-left: .7rem;
+        padding: 1rem 1.4rem;
+        border: 1px solid $border-color-product;
+        &:nth-child(1){
+          background-color: $primary-color;
+          color: white;
+        }
+        &:hover{
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+extend ../layouts/default_layout.pug
+block content
+    script.
+        var isGrid = true;
+
+    .girds.container.container__base
+        +navigate__mixin("Cây dạ lam")
+        .girds__main
+            +card__product__detail__mixin("./assets/images/products/spx2-15.png","./assets/images/products/spx2-15.png", "./assets/images/products/spx2-15.png", "./assets/images/products/spx2-15.png", "./assets/images/products/spx2-15.png", "./assets/images/products/spx2-15.png","Cây Dạ Lam","Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.","4.099.000 đ", "4.099.000 đ")
+            +product__detail__desc__mixin()
+            .girds__product
+                +title__icons__mixin("Sản phẩm cùng loại")
+                .row
+                    .col-3
+                        +card__product__mixin("./assets/images/products/spx2-15.png","Cây Dạ Lam","250.000đ","250.000đ")
+                    .col-3
+                        +card__product__mixin("./assets/images/products/spx2-12.png","Cây Danh Dự","250.000đ","250.000đ")
+                    .col-3
+                        +card__product__mixin("./assets/images/products/spx2-11.png","Cây chân chim","250.000đ","250.000đ")
+                    .col-3
+                        +card__product__mixin("./assets/images/products/spx2-11.png","Cây chân chim","250.000đ","250.000đ")
